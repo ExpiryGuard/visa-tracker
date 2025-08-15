@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, AlertTriangle, Clock, Users, Shield, Zap, Star, ArrowRight, FileText, BarChart3, Smartphone } from "lucide-react"
+import { CheckCircle, AlertTriangle, Clock, Users, Shield, Zap, ArrowRight, FileText, BarChart3, Smartphone } from "lucide-react"
 
 export default function LandingPage() {
   return (
@@ -303,20 +303,20 @@ export default function LandingPage() {
                   </div>
                   <div className="text-left">
                     <blockquote className="text-lg text-gray-700 italic mb-4">
-                      "Working in Dubai's business setup industry for 3 years, I watched companies
-                      lose thousands of dirhams to visa overstay fines - not because they didn't care,
-                      but because tracking hundreds of employee visa expiries in Excel was impossible."
+                      &quot;Working in Dubai&apos;s business setup industry for 3 years, I watched companies
+                      lose thousands of dirhams to visa overstay fines - not because they didn&apos;t care,
+                      but because tracking hundreds of employee visa expiries in Excel was impossible.&quot;
                     </blockquote>
                     <div className="mb-4">
                       <p className="text-gray-600">
                         I saw HR teams drowning in spreadsheets, companies getting surprise MOHRE violations,
                         and employees stressed about their visa status. The existing solutions were either
-                        too complex or didn't understand UAE's unique requirements.
+                        too complex or didn&#39;t understand UAE&#39;s unique requirements.
                       </p>
                     </div>
                     <div className="mb-4">
                       <p className="text-gray-600">
-                        That's when I decided to build ExpiryGuard - a simple, UAE-focused solution that
+                        That&#39;s when I decided to build ExpiryGuard - a simple, UAE-focused solution that
                         automates what should never be manual. No more missed deadlines, no more fines,
                         no more stress.
                       </p>
@@ -387,7 +387,7 @@ export default function LandingPage() {
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Try Risk-Free</h3>
                   <p className="text-sm text-gray-600">
-                    30-day free trial, no credit card required. If it doesn't save you money, don't pay.
+                    30-day free trial, no credit card required. If it doesn&#39;t save you money, don&#39;t pay.
                   </p>
                 </CardContent>
               </Card>
@@ -401,7 +401,7 @@ export default function LandingPage() {
                 </h3>
                 <div className="max-w-3xl mx-auto">
                   <p className="text-lg text-gray-700 mb-6">
-                    I'm not a big corporation trying to sell you software. I'm a developer who worked
+                    I&#39;m not a big corporation trying to sell you software. I&#39;m a developer who worked
                     in this industry and felt the frustration personally. Every feature in ExpiryGuard
                     solves a real problem I witnessed or experienced myself.
                   </p>
@@ -453,7 +453,7 @@ export default function LandingPage() {
                     <span className="text-3xl font-bold">AED 200</span>
                     <span className="text-gray-600">/month</span>
                   </div>
-                  <p className="text-sm text-gray-500 mt-2">That's AED 10 per employee</p>
+                  <p className="text-sm text-gray-500 mt-2">That&#39;s AED 10 per employee</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
@@ -495,7 +495,7 @@ export default function LandingPage() {
                     <span className="text-3xl font-bold">AED 400</span>
                     <span className="text-gray-600">/month</span>
                   </div>
-                  <p className="text-sm text-gray-500 mt-2">That's AED 4 per employee</p>
+                  <p className="text-sm text-gray-500 mt-2">That&#39;s AED 4 per employee</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
@@ -592,7 +592,7 @@ export default function LandingPage() {
                 <CardContent>
                   <p className="text-gray-600">
                     Setup takes less than 10 minutes. Simply upload your employee data via CSV,
-                    configure your alert preferences, and you're ready to go. Our team can help
+                    configure your alert preferences, and you&#39;re ready to go. Our team can help
                     with data migration if needed.
                   </p>
                 </CardContent>
@@ -641,7 +641,7 @@ export default function LandingPage() {
                   <p className="text-gray-600">
                     Yes, there are no long-term contracts. You can cancel your subscription anytime
                     with 30 days notice. We also offer a full money-back guarantee within the first
-                    30 days if you're not completely satisfied.
+                    30 days if you&#39;re not completely satisfied.
                   </p>
                 </CardContent>
               </Card>
