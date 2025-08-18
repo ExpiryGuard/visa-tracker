@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, AlertTriangle, Clock, Users, Shield, Zap, ArrowRight, FileText, BarChart3, Smartphone } from "lucide-react"
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function LandingPage() {
   return (
@@ -17,17 +18,29 @@ export default function LandingPage() {
               <nav className="hidden md:flex space-x-8">
                 <a href="#features" className="text-gray-500 hover:text-gray-900 transition-colors">Features</a>
                 <a href="#pricing" className="text-gray-500 hover:text-gray-900 transition-colors">Pricing</a>
-                <a href="#testimonials" className="text-gray-500 hover:text-gray-900 transition-colors">Reviews</a>
                 <a href="#faq" className="text-gray-500 hover:text-gray-900 transition-colors">FAQ</a>
                 <a href="#contact" className="text-gray-500 hover:text-gray-900 transition-colors">Contact</a>
               </nav>
               <div className="flex items-center space-x-4">
-                <Button variant="outline">Sign In</Button>
-                <Button>Get Started</Button>
+                <SignedOut>
+                  <SignInButton mode="modal">
+                    <Button variant="outline">Sign In</Button>
+                  </SignInButton>
+                  <SignInButton mode="modal">
+                    <Button>Get Started</Button>
+                  </SignInButton>
+                </SignedOut>
+                <SignedIn>
+                  <Button asChild>
+                    <a href="/dashboard">Dashboard</a>
+                  </Button>
+                  <UserButton afterSignOutUrl="/" />
+                </SignedIn>
               </div>
             </div>
           </div>
         </header>
+
 
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
