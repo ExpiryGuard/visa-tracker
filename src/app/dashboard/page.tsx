@@ -16,7 +16,7 @@ export default async function DashboardPage() {
                     Welcome to your Dashboard
                 </h1>
                 <p className="text-gray-600">
-                    You're successfully signed in! This is where the employee management will go.
+                    You&apos;re successfully signed in! This is where the employee management will go.
                 </p>
             </div>
         </div>
