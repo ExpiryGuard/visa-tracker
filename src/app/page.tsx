@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, AlertTriangle, Clock, Users, Shield, Zap, ArrowRight, FileText, BarChart3, Smartphone } from "lucide-react"
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";  //use SignInButton when mvp is ready
+import { WaitlistTrigger } from "@/components/WaitlistTrigger"
 
 export default function LandingPage() {
   return (
@@ -19,16 +20,16 @@ export default function LandingPage() {
                 <a href="#features" className="text-gray-500 hover:text-gray-900 transition-colors">Features</a>
                 <a href="#pricing" className="text-gray-500 hover:text-gray-900 transition-colors">Pricing</a>
                 <a href="#faq" className="text-gray-500 hover:text-gray-900 transition-colors">FAQ</a>
-                <a href="#contact" className="text-gray-500 hover:text-gray-900 transition-colors">Contact</a>
+                <a href="/blog" className="text-gray-500 hover:text-gray-900 transition-colors">Blog</a>
               </nav>
               <div className="flex items-center space-x-4">
                 <SignedOut>
-                  <SignInButton mode="modal">
-                    <Button variant="outline">Sign In</Button>
-                  </SignInButton>
-                  <SignInButton mode="modal">
-                    <Button>Get Started</Button>
-                  </SignInButton>
+                  <WaitlistTrigger variant="outline">
+                    Join Waitlist
+                  </WaitlistTrigger>
+                  <WaitlistTrigger>
+                    Get Started
+                  </WaitlistTrigger>
                 </SignedOut>
                 <SignedIn>
                   <Button asChild>
@@ -81,6 +82,107 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        {/*/!* Launch Timeline Section *!/*/}
+        {/*<section className="bg-white py-16">*/}
+        {/*  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">*/}
+        {/*    <div className="text-center mb-12">*/}
+        {/*      <h2 className="text-3xl font-bold text-gray-900 mb-4">*/}
+        {/*        MVP Launch Timeline*/}
+        {/*      </h2>*/}
+        {/*      <p className="text-xl text-gray-600">*/}
+        {/*        Here's what we're building for you*/}
+        {/*      </p>*/}
+        {/*    </div>*/}
+        {/*    <div className="grid md:grid-cols-3 gap-8">*/}
+        {/*      <Card className="border-blue-200 bg-blue-50">*/}
+        {/*        <CardHeader>*/}
+        {/*          <Badge className="bg-blue-500 text-white w-fit">Phase 1 - March 2025</Badge>*/}
+        {/*          <CardTitle>Core Features</CardTitle>*/}
+        {/*        </CardHeader>*/}
+        {/*        <CardContent>*/}
+        {/*          <ul className="space-y-2 text-sm">*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />*/}
+        {/*              Employee visa tracking*/}
+        {/*            </li>*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />*/}
+        {/*              Email alerts (30, 15, 7 days)*/}
+        {/*            </li>*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />*/}
+        {/*              CSV bulk import*/}
+        {/*            </li>*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-blue-500 mr-2" />*/}
+        {/*              Basic dashboard*/}
+        {/*            </li>*/}
+        {/*          </ul>*/}
+        {/*        </CardContent>*/}
+        {/*      </Card>*/}
+        {/*      <Card className="border-green-200 bg-green-50">*/}
+        {/*        <CardHeader>*/}
+        {/*          <Badge className="bg-green-500 text-white w-fit">Phase 2 - April 2025</Badge>*/}
+        {/*          <CardTitle>Advanced Features</CardTitle>*/}
+        {/*        </CardHeader>*/}
+        {/*        <CardContent>*/}
+        {/*          <ul className="space-y-2 text-sm">*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />*/}
+        {/*              WhatsApp alerts*/}
+        {/*            </li>*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />*/}
+        {/*              MOHRE compliance reports*/}
+        {/*            </li>*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />*/}
+        {/*              Document storage*/}
+        {/*            </li>*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />*/}
+        {/*              Mobile app*/}
+        {/*            </li>*/}
+        {/*          </ul>*/}
+        {/*        </CardContent>*/}
+        {/*      </Card>*/}
+        {/*      <Card className="border-purple-200 bg-purple-50">*/}
+        {/*        <CardHeader>*/}
+        {/*          <Badge className="bg-purple-500 text-white w-fit">Phase 3 - May 2025</Badge>*/}
+        {/*          <CardTitle>Enterprise Ready</CardTitle>*/}
+        {/*        </CardHeader>*/}
+        {/*        <CardContent>*/}
+        {/*          <ul className="space-y-2 text-sm">*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-purple-500 mr-2" />*/}
+        {/*              API integrations*/}
+        {/*            </li>*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-purple-500 mr-2" />*/}
+        {/*              Advanced analytics*/}
+        {/*            </li>*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-purple-500 mr-2" />*/}
+        {/*              Multi-user access*/}
+        {/*            </li>*/}
+        {/*            <li className="flex items-center">*/}
+        {/*              <CheckCircle className="h-4 w-4 text-purple-500 mr-2" />*/}
+        {/*              Custom reports*/}
+        {/*            </li>*/}
+        {/*          </ul>*/}
+        {/*        </CardContent>*/}
+        {/*      </Card>*/}
+        {/*    </div>*/}
+
+        {/*    <div className="text-center mt-12">*/}
+        {/*      <WaitlistTrigger size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600">*/}
+        {/*        Join 100+ Companies Already on Waitlist*/}
+        {/*        <ArrowRight className="ml-2 h-4 w-4" />*/}
+        {/*      </WaitlistTrigger>*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</section>*/}
 
         {/* Problem Section */}
         <section className="bg-red-50 py-16">
@@ -688,7 +790,7 @@ export default function LandingPage() {
                 Start Your 30-Day Free Trial
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-blue-600">
+              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-blue-600 hover:bg-gray-200 hover:text-blue-800">
                 Schedule Demo
               </Button>
             </div>
@@ -699,7 +801,7 @@ export default function LandingPage() {
               <div className="grid md:grid-cols-3 gap-6 text-blue-100">
                 <div>
                   <h4 className="font-semibold text-white mb-2">WhatsApp Support</h4>
-                  <p>+971 50 123 4567</p>
+                  <p>+971 52 224 6521</p>
                   <p className="text-sm">Available 9AM - 6PM</p>
                 </div>
                 <div>
@@ -709,8 +811,8 @@ export default function LandingPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-white mb-2">Office</h4>
-                  <p>Dubai Internet City</p>
-                  <p className="text-sm">Building 3, Office 201</p>
+                  <p>Al Jaffiliya, Dubai</p>
+                  <p className="text-sm">Inside Max Metro Station</p>
                 </div>
               </div>
             </div>
