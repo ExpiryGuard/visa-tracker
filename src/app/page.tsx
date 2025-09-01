@@ -1,9 +1,29 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, AlertTriangle, Clock, Users, Shield, Zap, ArrowRight, FileText, BarChart3, Smartphone } from "lucide-react"
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";  //use SignInButton when mvp is ready
 import { WaitlistTrigger } from "@/components/WaitlistTrigger"
+
+export const metadata: Metadata = {
+  title: "ExpiryGuard - Never Miss Another Visa Renewal | UAE Visa Tracking",
+  description: "Automated visa and Emirates ID tracking for UAE companies. Get alerts before expiry, avoid penalties, and stay MOHRE compliant effortlessly.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    title: "ExpiryGuard - Never Miss Another Visa Renewal",
+    description: "Automated visa tracking for UAE companies. Avoid penalties and stay compliant.",
+    type: "website",
+    locale: "en_AE",
+  },
+};
 
 export default function LandingPage() {
   return (

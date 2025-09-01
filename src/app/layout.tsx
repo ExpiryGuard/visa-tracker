@@ -14,10 +14,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "ExpiryGuard - UAE Visa Tracking System",
+    title: {
+        default: "ExpiryGuard - UAE Visa Tracking System",
+        template: "%s | ExpiryGuard"
+    },
     description: "Automated visa and Emirates ID tracking for UAE companies. Get alerts before expiry, avoid penalties, and stay MOHRE compliant effortlessly.",
     keywords: "UAE visa tracking, Emirates ID renewal, MOHRE compliance, visa alerts, Dubai business",
     authors: [{ name: "ExpiryGuard" }],
+    robots: {
+        index: true,
+        follow: true,
+    },
     openGraph: {
         title: "ExpiryGuard - Never Miss Another Visa Renewal",
         description: "Automated visa tracking for UAE companies. Avoid penalties and stay compliant.",
